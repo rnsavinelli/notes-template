@@ -1,7 +1,6 @@
 # Report-Essay template
 
 Template designed with the objective of offering a simple and organized base on which to write notes and cheat-sheets.
-
 My main goal was to keep it simple and elegant.
 
 ## Compilation
