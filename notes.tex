@@ -1,11 +1,11 @@
 % Notes Template
-% Template version used: v0.2
+% Template version used: v0.3
 % https://github.com/rnsavinelli/notes-template
 %
 %!TEX encoding = UTF-8 Unicode
 
 % Document-class options:
-\documentclass[a4paper]{article}
+\documentclass[letter]{article}
 
 % Package includes and formatting settings -----------
 % ----------------------------------------------------
@@ -17,12 +17,12 @@
 
 \usepackage{hyperref}
 
-% These settings should be modified / deleted / 
+% These settings should be modified / deleted /
 \def\authorsname{Mr./Mrs. Author}
 \def\authorswebsite{}
-\def\course{Notes template}
+\def\course{\LaTeX}
 \def\courseyear{}
-\def\typeoffile{example}
+\def\typeoffile{Template}
 \def\university{}
 
 % PDF Settings
@@ -50,13 +50,13 @@
 
 % Document format and settings -----------------------
 % ----------------------------------------------------
-\usepackage[left=1in, right=1in, bottom=1.25in, top=1.25in]{geometry}
+\usepackage[left=.75in, right=.75in, bottom=1in, top=1in]{geometry}
 
 % Better spacing between lines
 \usepackage{parskip}
 
 \setlength\parindent{0em}
-\pagenumbering{roman}
+%\pagenumbering{roman}
 
 \usepackage{chngcntr}
 \counterwithin*{equation}{section}
@@ -66,17 +66,11 @@
 
 \titleformat{\section}{\bfseries\Large}{}{0em}{}
 \titleformat{\subsection}{\bfseries\large}{}{0em}{}
-
-\newcommand{\topic}[1] {
-    \medskip 
-    {\bfseries #1:}
-}
+\titleformat{\subsubsection}{\bfseries\normalsize}{}{0em}{}
 
 % \today commands
 \usepackage{datetime}
 
-% This package is only used to generate dummy text
-% you may want to remove it
 \usepackage{lipsum}
 
 % Content of the document ----------------------------
