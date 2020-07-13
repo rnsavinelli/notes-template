@@ -1,5 +1,5 @@
 % Notes Template
-% Template version used: v0.3
+% Template version: v0.4
 % https://github.com/rnsavinelli/notes-template
 %
 %!TEX encoding = UTF-8 Unicode
@@ -7,8 +7,8 @@
 % Document-class options:
 \documentclass[letter]{article}
 
-% Package includes and formatting settings -----------
-% ----------------------------------------------------
+% Package includes and formatting settings -----------------------------------
+% ----------------------------------------------------------------------------
 
 % LaTeX Font encoding - 8-bit fonts
 \usepackage[T1]{fontenc}
@@ -18,21 +18,21 @@
 
 \usepackage{hyperref}
 
-% These settings should be modified / deleted /
+% These settings should be modified by the user
 \def\authorsname{Mr./Mrs. Author}
 \def\authorswebsite{}
 \def\course{\LaTeX}
 \def\courseyear{}
-\def\typeoffile{Template}
+\def\thetitle{Title}
+\def\thesubtitle{Subtitle}
 \def\university{}
 
 % PDF Settings
 \hypersetup{
     pdfauthor = {\authorsname},
     pdfkeywords = {-},
-    pdftitle = {\course \ \typeoffile},
+    pdftitle = {\thetitle \\ {\large \thesubtitle}},
     pdfsubject = {-},
-    pdfcreator={TeX}
 }
 
 % HREF settings
@@ -49,8 +49,8 @@
 % AMS-LaTeX extensions for mathematical typesetting.
 \usepackage{amsmath,amsthm,amsfonts,amssymb,mathrsfs}
 
-% Document format and settings -----------------------
-% ----------------------------------------------------
+% Document format and settings -----------------------------------------------
+% ----------------------------------------------------------------------------
 \usepackage[left=1in, right=1in, bottom=1.25in, top=1.25in]{geometry}
 
 % Better spacing between lines
@@ -64,46 +64,61 @@
 
 % Title, section, and topic formatting
 \usepackage{titlesec}
+\usepackage[labelfont=bf]{caption}
+
+% \today commands
+\usepackage{datetime}
+
+% Content of the document ----------------------------------------------------
+% ----------------------------------------------------------------------------
+
+\begin{document}
+
+\title{\thetitle \\ {\large \thesubtitle}}
+\author{\authorsname}
+\date{\today}
+
+\maketitle
+
+% Include as many files as needed. This approach is taken to reduce the amount
+% of information contained inside this very same document. It is not mandatory
+% to use external files to add your content, but it is advisable.
+%
+% \input is preferred over \include since the latter automatically appends a
+% page break. Deppending of your use case you might prefer one over the other.
+
+\input{section-01}
+\input{section-02}
+
+% Closing of the document ----------------------------------------------------
+% ----------------------------------------------------------------------------
+% Comment the commands below to re-enable section,
+% subsection and subsubsection numbering.
 
 \titleformat{\section}{\bfseries\Large}{}{0em}{}
 \titleformat{\subsection}{\bfseries\large}{}{0em}{}
 \titleformat{\subsubsection}{\bfseries\normalsize}{}{0em}{}
 
-% \today commands
-\usepackage{datetime}
+% Bibliography ---------------------------------------------------------------
+% ----------------------------------------------------------------------------
 
-\usepackage{lipsum}
-
-% Content of the document ----------------------------
-% ----------------------------------------------------
-
-\begin{document}
-
-\title{\bfseries \course \ \typeoffile}
-\author{\authorsname}
-\date{}
-
-\maketitle
-
-% Include as many files as needed. This approach is taken to reduce the amount of
-% information contained in this very same document. It is not mandatory to use external
-% files to add your content but it is highly recommended.
-%
-% \input is preferred over \include since the latter automatically appends a page break.
-
-\input{content}
-
-% Closing of the document ----------------------------
-% ----------------------------------------------------
 %\newpage
+%\bibliographystyle{plain}
+%\bibliography{bib/uni}
 
-%\section{About This Document}
+% Appendices -----------------------------------------------------------------
+% ----------------------------------------------------------------------------
 
-%Maybe add some bibliography or additional information.
+%\newpage
+%\input{appendix-a}
 
-%Last updated: {\today}.
+% About Section --------------------------------------------------------------
+% ----------------------------------------------------------------------------
+
+%\newpage
+%\input{about}
 
 \end{document}
 
-% End of the document --------------------------------
-% ----------------------------------------------------
+% End of the document --------------------------------------------------------
+% ----------------------------------------------------------------------------
