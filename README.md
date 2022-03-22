@@ -7,7 +7,7 @@ The structure of the repository is very simple:
 - **notes.tex** is the core of the document where all the configurations and content files are included.
 - **content.tex** is a sample file to demonstrate how to include other content files inside the one mentioned above. It also is an example on how these files should look like when used.
 - The **images** folder is intended to be used to store all the images used in the document, though it can be configured to the users liking.
-- The **examples** folder contains examples, as expected. And, lastly, **README.md** and **LICENSE** (i think) do not need a presentation.
+- The **examples** folder contains examples, as expected.
 
 ## Compilation
 
