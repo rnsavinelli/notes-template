@@ -11,7 +11,7 @@ The structure of the repository is very simple:
 
 ## Compilation
 
-As all other `.tex`, `.bib` files are either included or inputted into `notex.tex`, to compile this template run:
+As all other `.tex`, `.bib` files are either included or inputted into `notes.tex`, to compile this template run:
 
 ```
 pdflatex notes.tex
